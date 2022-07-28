@@ -16,10 +16,17 @@ class Counter extends Component {
 
         return (
             <div>
-                <img src={this.state.imageUrl} alt="" />
+                {/* <img src={this.state.imageUrl} alt="" /> */}
                 <span style={this.styles} className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 
-                <button className="btn btn-secondary btn-sm">Increment</button>
+                <button className="btn btn-danger btn-sm">Increment</button>
+                <br></br>
+                <button className="btn btn-secondary btn-sm">+</button>
+                <button className="btn btn-secondary btn-sm">-</button>
+                <button className="btn btn-secondary btn-sm">*</button>
+                <button className="btn btn-secondary btn-sm">/</button>
+                <button className="btn btn-success btn-sm">=</button>
+                
                 <ul>
                     { this.state.tags.map(tag => <li key={tag}>{ tag }</li>) }
                 </ul>
